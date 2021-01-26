@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <link rel="icon" href="data:,">
+   </head>
+   
+   <body>
+      <div>
+      <p><small> Allowed image extensions are jpg and png</small></p>
+      </div>
+      
+     
+      <div class="search">
+	  <h3>Query image nearest neighbors</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('query')}}" method="POST" enctype = "multipart/form-data">
+        	<input type = "file" name = "file"  />
+            <button type="submit" class="btn btn-primary">Query</button>
+       </form>
+
+       <br>
+       <br>
+        {{ results }}
+
+        </div>
+        
+     
+     <p><a href="{{ url_for('home') }}">Go to homepage!</a></p>
+         
+     
+   </body>
+</html>
