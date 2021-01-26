@@ -69,19 +69,19 @@ def query():
             image_feature = image_semantic(img_resize)
             K.clear_session()
            
-            img_indx = np.load('image_ids_list.npy')
-            ann_index = load_model()
-            search_results_pos = ann_index.get_nns_by_vector(image_feature[0], n=10, search_k = 1000,  include_distances=False)
+            #img_indx = np.load('image_ids_list.npy')
+            #ann_index = load_model()
+            #search_results_pos = ann_index.get_nns_by_vector(image_feature[0], n=10, search_k = 1000,  include_distances=False)
             
             search_results_img  = []
-            for j in search_results_pos:
-                img_name = img_indx[j] + '.jpg'
-                search_results_img.append(img_name)
+            #for j in search_results_pos:
+            #    img_name = img_indx[j] + '.jpg'
+            #    search_results_img.append(img_name)
             
             print("i am here")
             # send back to browser
             #output = {'results': int(result[0])}
-            output = {'10 results': search_results_img}
+            #output = {'10 results': search_results_img}
             
         else:
             print("That file extension is not allowed")
