@@ -19,5 +19,6 @@ tensorflow-tensorboard==1.5.1
 Werkzeug==1.0.1
 scipy>=0.15.1
 scikit-learn>=0.18
+opencv-python==3.4.0
 
 
